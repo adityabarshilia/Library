@@ -1,0 +1,114 @@
+:root{
+    --font: 'Courier New', Courier, monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: rgb(233, 239, 252);
+}
+
+.container{
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    position: relative;
+    top: 100px;
+    left: 10px;
+    right: 10px;
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+    font-size: 52px;
+    color:  rgb(29, 37, 51);
+    background-color: rgb(193, 213, 250);
+    padding: 20px;
+    border-bottom: 1px solid rgb(59, 56, 56);
+}
+
+.bookbtn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookbtn button{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-family: var(--font);
+    color: rgb(29, 37, 51);
+    background-color: rgba(228, 238, 240, 0.795);
+    border: 1px solid  rgb(59, 56, 56);
+    border-radius: 2px;
+}
+
+.bookbtn button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.form{
+    margin: 15px auto;
+    padding: 20px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(201, 217, 219);
+    width: 200px;
+    border: 1px solid  rgb(59, 56, 56);
+    border-radius: 5px;
+}
+
+.form form > input{
+    padding: 10px;    
+    margin: 10px;
+    border: 1px solid  rgb(59, 56, 56);
+    border-radius: 2px;
+}
+
+.form form > label{
+    margin-left: 60px;
+}
+
+.form form > input[value="submit"]{
+    margin-left: 70px;
+}
+
+div[data-bookid]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    min-width: 130px;
+    min-height: 160px;
+    font-family: var(--font);
+    background-color: rgb(204, 220, 250);
+}
+
+div[data-bookid]>button{
+    width: 50px;
+    color: rgb(29, 37, 51);
+    background-color: rgba(228, 238, 240, 0.795);
+    border: 1px solid  rgb(59, 56, 56);
+    border-radius: 2px;
+}
+div[data-bookid]>button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
