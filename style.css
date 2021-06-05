@@ -4,22 +4,27 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
+    
 }
 
 html{
     background-color: rgb(233, 239, 252);
 }
 
+body{
+    min-height: 100vh;
+}
+
 .container{
     display: none;
     grid-template-columns: repeat(12, 1fr);
+    align-content: space-around;
     gap: 10px;
     position: relative;
     top: 100px;
-    left: 10px;
-    right: 10px;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     height: auto;
 }
 
@@ -95,8 +100,8 @@ div[data-bookid]{
     gap: 5px;
     border: 1px solid black;
     border-radius: 5px;
-    min-width: 130px;
-    min-height: 160px;
+    max-width: 150px;
+    height: 180px;
     font-family: var(--font);
     background-color: rgb(204, 220, 250);
 }
