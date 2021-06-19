@@ -5,7 +5,7 @@
 *{
     margin: 0;
     padding: 0; 
-    
+    box-sizing: border-box; 
 }
 
 html{
@@ -19,9 +19,9 @@ body{
 }
 
 .container{
-    width: 100%;
+    width: 90%;
     display: none;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: 100px auto 0 auto;
     gap: 10px;
     justify-items: center;
@@ -71,7 +71,7 @@ h1{
     align-items: center;
     flex-direction: column;
     background-color: rgb(193, 213, 250);
-    width: 200px;
+    width: 250px;
     border: 1px solid  rgb(59, 56, 56);
     border-radius: 5px;
 }
@@ -97,6 +97,7 @@ h1{
 
 div[data-bookid]{
     min-width: 50%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,18 +105,19 @@ div[data-bookid]{
     gap: 5px;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 0;
     font-family: var(--font);
     background-color: rgb(204, 220, 250);  
 }
 
 div[data-bookid]>button{
-    width: 50px;
+    padding: 7px;
     color: rgb(29, 37, 51);
     background-color: rgba(228, 238, 240, 0.795);
     border: 1px solid  rgb(59, 56, 56);
     border-radius: 2px;
 }
+
 div[data-bookid]>button:hover{
     transform: scale(1.05);
     cursor: pointer;

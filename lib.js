@@ -39,11 +39,11 @@ function displayBook() {
         bookdiv.setAttribute("data-bookid", `${mylibrary.indexOf(book)}`);
         container.appendChild(bookdiv);
         container.setAttribute("style", "display: grid;");
-        bookdiv.innerHTML = `<span>${book.Name}</span><br>
-  <span>${book.Author}</span><br>
-  <span>${book.Pages}</span><br>
-  <button id ="readbtn">${book.Read}</button> 
-  <button id ="rembtn">Remove</button>`;
+        bookdiv.innerHTML = `<span>${book.Name}</span>
+                             <span>${book.Author}</span>
+                             <span>${book.Pages}</span>
+                             <button id ="readbtn">${book.Read}</button> 
+                             <button id ="rembtn">Remove</button>`;
         let readbtns = document.querySelectorAll("#readbtn");
         let rembtns = document.querySelectorAll("#rembtn");
         readbtns.forEach(readbtn => readbtn.addEventListener('click', onRead));
@@ -88,10 +88,10 @@ function restoreLocal() {
     }
 }
 
- function hideForm(){
-     formdiv.style.display = 'none';
-     container.style.display = 'grid';
- }
+function hideForm() {
+    formdiv.style.display = 'none';
+    container.style.display = 'grid';
+}
 
 let mylibrary = [];
 let title;
