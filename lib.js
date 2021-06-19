@@ -19,25 +19,16 @@ function submitData(e) {
     read = document.getElementById("read").checked ? "Read" : "Not Read";
     newbook = new book(title, author, pages, read);
     addBook(newbook);
-    formdiv.remove();
+    formdiv.style.display = 'none';
 }
 
 function DisplayForm() {
-    if (body.contains(formdiv)) return;
-    formdiv = document.createElement('div');
-    body.appendChild(formdiv);
-    formdiv.classList.add("form");
-    formdiv.innerHTML = `<h2>Add New Book</h2>
-  <form id="theform">
-  <input id="title" type="text" name="title" placeholder="Title" required><br>
-  <input id="author" type="text" name="Author" pattern="[A-Za-z]+" placeholder="Author" required><br>
-  <input id="pages" type="number" name="Pages" placeholder="Pages" required><br>
-  <label for="read">Read?</label>
-  <input type="checkbox" id="read"><br>
-  <input id="submit" type ="submit" value ="submit">
-</form>`;
+    formdiv = document.querySelector(".form");
+    if (formdiv.style.display == "flex") return;
+    formdiv.style.display = 'flex';
     container.setAttribute("style", "display: none;");
     document.getElementById("theform").addEventListener('submit', submitData);
+    document.getElementById("Cancel").addEventListener('click', hideForm);
 }
 
 function displayBook() {
@@ -97,6 +88,11 @@ function restoreLocal() {
     }
 }
 
+ function hideForm(){
+     formdiv.style.display = 'none';
+     container.style.display = 'grid';
+ }
+
 let mylibrary = [];
 let title;
 let author;
@@ -106,7 +102,7 @@ let formdiv;
 let newbook;
 let id;
 const container = document.querySelector(".container");
-const bookbtn = document.querySelector(".bookbtn");
+const newbookbtn = document.querySelector("#newbookbtn");
 const body = document.querySelector("body");
-bookbtn.addEventListener('click', DisplayForm);
+newbookbtn.addEventListener('click', DisplayForm);
 restoreDisplay();

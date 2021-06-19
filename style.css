@@ -65,18 +65,18 @@ h1{
 .form{
     margin: 15px auto;
     padding: 20px;
-    display: flex;
+    display: none;
     justify-self: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(201, 217, 219);
+    background-color: rgb(193, 213, 250);
     width: 200px;
     border: 1px solid  rgb(59, 56, 56);
     border-radius: 5px;
 }
 
-.form form > input{
+.form form > input, .form form div > input{
     padding: 10px;    
     margin: 10px;
     border: 1px solid  rgb(59, 56, 56);
@@ -87,11 +87,16 @@ h1{
     margin-left: 60px;
 }
 
-.form form > input[value="submit"]{
-    margin-left: 70px;
+.form form div{
+    margin-left: 30px;
+}
+
+.form form div > input{
+    cursor: pointer;
 }
 
 div[data-bookid]{
+    min-width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
