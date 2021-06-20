@@ -21,7 +21,8 @@ body{
 .container{
     width: 90%;
     display: none;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-auto-rows: auto;
     margin: 100px auto 0 auto;
     gap: 10px;
     justify-items: center;
@@ -96,8 +97,8 @@ h1{
 }
 
 div[data-bookid]{
-    min-width: 50%;
-    max-width: 100%;
+    min-width: 180px;
+    max-width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,9 +106,9 @@ div[data-bookid]{
     gap: 5px;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-family: var(--font);
-    background-color: rgb(204, 220, 250);  
+    background-color: rgb(204, 220, 250);
 }
 
 div[data-bookid]>button{
